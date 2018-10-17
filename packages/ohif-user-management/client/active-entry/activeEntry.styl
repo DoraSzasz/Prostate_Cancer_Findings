@@ -1,0 +1,26 @@
+@import "{ohif:design}/app.styl"
+
+#entrySignIn.entryPage,
+#entrySignUp.entryPage,
+#changePassword,
+#forgotPassword,
+#resetPassword
+  .wrapper-auth
+    .title-auth
+      color: white
+
+    .entryLogo
+      margin-top: 50px
+      height: 125px
+      width: 125px
+
+    .input-symbol
+      .fa
+        color: #333333
+
+    button
+      &.btn-main
+        padding-left: 0
+
+.entryPage .wrapper-auth,.subtitle-auth
+  theme('color', '$textPrimaryColor')

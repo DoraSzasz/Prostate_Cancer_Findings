@@ -1,0 +1,39 @@
+<template name="aboutModal">
+    {{#dialogSimple (extend this id='aboutModal' dialogClass='modal-lg' title='About')}}
+       
+        <div class="p-x-1 p-y-1 m-y-2">
+            <!-- <a class="btn btn-default inline"
+               target='_blank'
+               href="https://groups.google.com/forum/#!forum/cornerstone-platform">
+                Visit the forum
+            </a> -->
+        </div>
+        <div class="p-y-1 p-x-1">
+            <h3>About</h3>
+            <table class="table table-responsive">
+              <tbody>
+                <tr>
+                    <td>
+
+                      <p>AI component is developed with Flask and each AI model is wrapped into an application program interface (API)
+                      endpoint. Prediction time is less than a second for each finding on a CPU machine; however,
+                      models can be written in a way to benefit from the power of GPUs.</p>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <div class="p-y-1 p-x-1">
+            <h3>Contact Us</h3>
+            <table class="table table-responsive">
+              <tbody>
+                <tr>
+                    <td>
+                      <p>Teodora Szasz (tszasz@uchicago.edu), Research Computing Center, The University of Chicago</p>
+                    </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+    {{/dialogSimple}}
+</template>
