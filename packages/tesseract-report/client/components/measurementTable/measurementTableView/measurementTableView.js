@@ -289,8 +289,8 @@ Template.measurementTableView.onRendered(() => {
   });
 
   // TODO: github will block the call after 60 calls per hour! come up with a better implementation.
-  const modelsGitHubOrg = "/Tesseract-MI";
-  const modelsGitHubRepo = "/prostatecancer.ai";
+  const modelsGitHubOrg = "/DoraSzasz";
+  const modelsGitHubRepo = "/Prostate_Cancer_Findings";
   $.ajax({url: `https://api.github.com/repos${modelsGitHubOrg}${modelsGitHubRepo}/contents/models`, success: function(result) {
       let nameArr = [];
       let modelsInfoDict = {};
