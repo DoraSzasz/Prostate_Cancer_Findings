@@ -1,7 +1,11 @@
 @import "{ohif:design}/app"
 
-a.brand.pull-left > img
+body > div.header.noselect > div > a.brand.pull-left > img
   display: none
+
+body > div.header.noselect.header-big > div > a.brand.pull-left > img
+  display: block
+  margin: 0 20px 0 0
 
 #viewer
   height: "calc(100% - %s)" % $topBarHeight
