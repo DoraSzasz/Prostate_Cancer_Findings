@@ -12,9 +12,9 @@ Template.entrySignIn.hooks({
         // Create Test Drive button dynamically
         let btnTestDrive = $('<button/>', {
             id: 'btnTestDrive',
-            text: 'Test Drive',
+            text: 'Demo',
             class: 'btn btn-primary',
-            style: 'position: absolute; width: 150px; top: 20px; right: 20px; padding-left: 0;',
+            style: 'position: absolute; width: 150px; top: 60px; right: 20px; padding-left: 0;',
             title: 'Login with Demo User',
             click: function () {
                 // Login with demo user

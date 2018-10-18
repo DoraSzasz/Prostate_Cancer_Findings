@@ -1,73 +1,78 @@
 <template name="entrySignIn">
-  <div id="entrySignIn" class="page entryPage" style="{{getOpacityWithCorner}}">
-
-    <div class="content-scrollable">
-      <div class="wrapper-auth">
-        {{#if isLoggedIn}}
-          <h1 id="signInPageTitle" class="title-auth">{{fullName}}</h1>
-          <div id="signInPageMessage" class="subtitle-auth">You are currently signed in.</div>
-
-          <button id="logoutButton" class="btn-primary btn-main btn-large" style="{{getButtonColor}}">Logout</button>
-        {{else}}
-          <h1 id="signInPageTitle" class="title-auth">Sign In.</h1>
-          <p id="signInPageMessage" class="subtitle-auth" style="{{getSignInMessageColor}}">{{{getSignInMessage}}}</p>
-
-            {{#if isLDAPSet}}
-                <form>
-                    {{#if ldapErrorMessages}}
-                        <div id="errorMessages" class="list-errors">
-                            {{#each ldapErrorMessages}}
-                                <div class="alert alert-danger list-item">{{this}}</div>
-                            {{/each}}
-                        </div>
-                    {{/if}}
-                    <div class="input-symbol">
-                        <input id="signInLDAPUsernameInput" type="text" name="username" placeholder="Username" style="{{getLDAPUsernameValidationStyling}}" />
-                        <i class="fa fa-envelope-o" title="Your Email"></i>
-                    </div>
-                    <br><br>
-
-                    <div class="input-symbol">
-                        <input id="signInLDAPPasswordInput" type="password" name="password" placeholder="Password" style={{getLDAPPasswordValidationStyling}} />
-                        <span class="fa fa-lock" title="Password"></span>
-                    </div>
-                </form>
-
-                <br><br>
-                <button id="signInLDAPToAppButton" class="btn-primary btn-main btn-large" style="{{getButtonColor}}">{{getButtonText}}</button>
-            {{else}}
-                <form>
-
-                    <div class="input-symbol">
-                        <input id="signInPageEmailInput" type="text" name="email" placeholder="Your Email" style="{{getEmailValidationStyling}}" />
-                        <i class="fa fa-envelope-o" title="Your Email"></i>
-                    </div>
-                    <br><br>
-
-                    <div class="input-symbol">
-                        <input id="signInPagePasswordInput" type="password" name="password" placeholder="Password" style={{getPasswordValidationStyling}} />
-                        <span class="fa fa-lock" title="Password"></span>
-                    </div>
-                </form>
-
-                <br><br>
-                <button id="signInToAppButton" class="btn-primary btn-main btn-large disabledButton" disabled style="{{getButtonColor}}">{{getButtonText}}</button>
-
-                <br><br>
-                <button id="needAnAccountButton" class="btn-gray btn-main btn-large">Need an account?</button>
-
-                <br><br>
-                <button id="forgotPasswordButton" class="btn-gray btn-main btn-large">Forgot password?</button>
-
+        {{#header headerClasses='header-big'}}
+        {{#section 'brand'}}
+            <img src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo.png"}} width="12%">
+            <!-- <svg class="logo-image">
+                <use xlink:href={{absoluteUrl "/packages/ohif_viewerbase/assets/shield.svg#icon-ohif-logo"}}></use>
+            </svg> -->
+            <!-- <svg class="logo-image">
+                <use xlink:href={{absoluteUrl "/packages/ohif_viewerbase/assets/shield.svg#icon-ohif-logo"}}></use>
+            </svg> -->
+            <div class="logo-text">Prostate Cancer Finder</div>
+        {{/section}}
+        {{#section 'headerAfterBrand'}}
+            {{#if studyListToggleText}}
+                <a href="#" class="btn studyListLinkSection pull-left js-toggle-studyList">
+                    {{studyListToggleText}}
+                </a>
             {{/if}}
+        {{/section}}
+        <!-- {{#section 'headerMenu'}}
+            <span class="user-name pull-left m-r-1">{{userName}}</span>
+            <span class="header-options pull-left m-r-1"> | </span>
+            <span class="header-options pull-left m-r-1">Options</span>
+            <div class="menu-toggle pull-right">
+                <span class="caret-down"></span>
+            </div>
+        {{/section}} -->
+    {{/header}}
 
-        {{/if}}
-		
-		{{#if logoIsDisplayed}}
-          <div id="entryAppLogo" class="entryLogo" style="background-image: url('{{logoUrl}}')"></div>
-        {{/if}}
-      </div>
-
+    <div id="entrySignIn" class="page" style="{{getOpacityWithCorner}}">
+        <div class="content-scrollable">
+            <div>
+                <img src="{{absoluteUrl "/packages/ohif_viewerbase/assets/banner.png"}}" alt="PCa Finder" title="PCa Finder" width="100%">
+            </div>                
+            <br>
+            <div id="how-to">
+                <div id="how-to-content">
+                    <br>
+                    <p>
+                        Prostate cancer (PCa) is one of the major causes of cancer death for men. Multi-parametric MRI (mpMRI) is increasingly being used for PCa diagnosis. While mpMRI is very good at detecting prostate cancers, still 15-30% of clinically significant cancers can be missed even by expert radiologists. The current state of prostate mpMRI is based on the subjective assessment by radiologists that need extensive training. Artificial intelligence and computer aided diagnosis tools have been investigated for PCa diagnosis using mpMRI data to mitigate the problems with variability in PCa diagnosis among radiologists. Numerous studies have shown promising results, however low specificity and high false positive rates remain to be a major concern limiting wide spread use of mpMRI for screening and diagnosis of PCa.
+                    </p>
+                    <hr>
+                    <p>
+                        Newly developed deep learning techniques could potentially be very useful in improving PCa diagnosis. In this demo, we developed a tool that automatically detects if a mp-MRI image contains cancerous region, using texture feature extraction methods. A neuronal network model  was trained using texture features extracted on different image series (e.g., T2, ADC, DCE) for each patient. For training and testing, data sets of 300 patients were used and a region was determined to be clinically significant cancer if the biopsy Gleason Score was 3+4 or higher. Texture features were extracted, based on the gray level co-occurrence matrix (GLCM). These features (more than 10 000 samples) were used to train the model. 3D Convolutional Neural Network and ShallowNet architectures were used, using Keras library.
+                    </p>
+                    <br>
+                </div>
+            </div>
+            <br>       
+        </div>
     </div>
-  </div>
+
+    <footer class="main_footer">
+        <div class="main_footer_wrapper">
+            <div class="container">
+                <div class="copyright">
+                    <div>
+                        <img src="{{absoluteUrl "/packages/ohif_viewerbase/assets/rcc_powered_maroon.png"}}" alt="Research Computing Center (RCC) at The University of Chicago" title="Research Computing Center (RCC) at The University of Chicago" width="85%">
+                    </div>
+                    Copyright © 2018 <a href="https://rcc.uchicago.edu/" target="_blank"> Research Computing Center(RCC) at the University of Chicago </a>. All Rights Reserved. </div>
+    
+                <div class="sidebar_footer">
+                    <div class="footer_socials social_icons">
+                        <ul>
+                            <li><a class="facebook" target="_blank" href="https: //www.facebook.com/The-University-of-Chicago-Research-Computing-Center-498755713533665/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" target="_blank" href="https://twitter.com/uchicago_rcc" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- .social_icons -->
+                </div>
+    
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <!-- .main_footer_wrapper -->
+    </footer>
 </template>

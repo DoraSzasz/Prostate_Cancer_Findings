@@ -28,7 +28,12 @@ Package.onUse(function(api) {
     ]);
 
     const assets = [
+        'assets/favicon.ico',
         'assets/icons.svg',
+        'assets/shield.svg',
+        'assets/logo.png',
+        'assets/rcc_powered_maroon.png',
+        'assets/banner.png',
         'assets/fonts/Roboto-Black-latin-ext.woff',
         'assets/fonts/Roboto-Black-latin-ext.woff2',
         'assets/fonts/Roboto-Black-latin.woff',

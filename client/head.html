@@ -1,12 +1,74 @@
 <head>
-    <meta charset="utf-8">
+    <base><!--[if lte IE 6]></base><![endif]-->
+    
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    
+    <!--<link rel="canonical" href="#" />-->
     <title>PCa Finder</title>
-    <meta name="description" content="A prostate mpMRI web viewer and tool for automate detection of a cancer region">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no">
-    <link rel="shortcut icon" type="image/png" href="/images/logo.png" sizes="16x16 32x32 64x64">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="description" content="A prostate mpMRI web viewer and tool for automate detection of a cancer region">
+    <meta name="keywords" content="GeoCode, geocode, gis geocode, geocoding, uchicago geocode, uchicago geocoding, rcc geocoding, rcc geocode, GIS, RCC GIS, uchicago gis, UChicago GIS, chicago gis, GIS Data, data, gis data, geocode, gis database, gis web Portal, uchicago gis website"
+    />
     <!--Best display for mobile devices-->
     <meta http-equiv="cleartype" content="on">
     <meta name="MobileOptimized" content="320">
     <meta name="HandheldFriendly" content="True">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!--
+    .+((<<+==sszzhhhDDhhDDDhhhDDDDDDhhDDDDhhDDDhhhzzss==++<<(++.
+    Nh=++>(++++''..                              ..''++++)<++=hN
+    N           +''..'+<=zhDDhz=(..++szhDhz=(+'.. ...          N
+    N           BNNNNNBBNDzNNhBNN==NBs=B=BsNBDNNNNNNh          N
+    N    +('    BD+h+N+sz+hN(((BN==NNB+sBs(N+=DD=hNNh          N
+    N   =NNN'hh+Bh<D=N+NNs=h+hzBN==NNNhzNN(D==N(s<NNh+DhDBh'   N
+    N   +sz+ <<.BBzzDsB+hs++NzB=N==Nhzz=D=s=NBDhDhNNh+Ds<'     N
+    N           B<DN=<h(Bzh(+zD+N==N.Dz=Ns+zszzhs(hBh          N
+    N     .     BBsDssDDBDBsNzNsB==N=shzNDDBD<zz(=BBh          N
+    N   <NNh.++'BNh<D(=zz<B<Dh<sN==N+ND=sD+B=B=NhBBNh=DDDBh'   N
+    N   <BNh.zz'BN(=N(h<D<B=z(+(N==N+D<=+D+B(z+B<=sNh+hs(' .   N
+    N           BNNDNBNNNNNNNNNNN==NDNBNNNNNBBDBhDNNh          N
+    N           DBDDhs+<++'. .+(=<<+('. .'++<+szhDBNh          N
+    N                                                          N
+    N               .++.      +(+zss+<''       ++'             N
+    N           +szDNNNB'    zhhNz+sBN+.   'zBBNNNBh<.         N
+    N         '+DNNNNNNN+  +=<(+=zNNNNs'   =NNNNNNNNNBs+       N
+    N      '+hNNNNNNNNNDz+  ++''<==zNNz  ++h=sNNNNNNNNNB<      N
+    N   '<hNDhNNNNNNNN+   h+    '+zBNNz' +'  =NNNNNNNNNBzs+    N
+    N  .((+'+BNNNNNNNN(  .sND(  +=hNNz( +D( <NNNNNNNNNN=Dh<(.  N
+    N    (sNNNNNNNNNNNhshDsBNN+zNNNNNs+=BNBNNNNNNNNNNNBN=zN=   N
+    N  (s=<=BNNNNNNNNNNNNNNNNB(hNNNNNz<BNNNNNNNNNNNNNNB=N=<hh' N
+    N    (DsDNNNNNNNNNNNNNNNND(NNNNNNND<NNNNNNNNNNNNBBNzzN= .' N
+    N  +hs+hzDNBNNzNNNNNNNNNN<DNNNNNNBB<NNNNNNNNNNzNB+NN<NN(   N
+    Bs.+. zD'NBsD<BDzNzDNBNNNs+zNNNNNN<=NNNNNNNNsNh<B+NNzsND  =B
+    zD   +N++N=s+Ns=NszN+DNNNN(BNs+NNNz+NNNNNNNND+DB+'hNN+NN  hz
+    <N' 'N< +z(=++h=(zD(hz(s=B=+D=sDNB+zNNNDNNz=NB<+N<sz=.hN 'N<
+    .B= +z  'N<N+D=+B+<=<zshB<=D<ND<+<+(NN+<NhNh+(ND+'+D+ +D +B.
+    =B.+.   B(B=(<=sz(+Nh+hNN+z(Nz=N<<h=zh=sz+(D+zs<zNz   +.B=
+    .Bs     ++=BBNzsNz(NN'=NNh+(NDNN+Ds+sNz(<==D+<+DNN+'   =B.
+    +N(    .s<(+=zhBNNNNh+<BNz+NNNz=D+<NN(+=zD+sBNDzz+   +N(
+    +N+    =s    .(=sDNNNBsszBDND=NB+DB<+DBs<++'  hz   +B=
+        =B+    '   '++=z=<<<++sDsDNBNNNNB=hs+        <.  +Bs
+        +N<        (hzssDNNNBhzBNNNNNNN=+. .(<.        +B=
+        +Bs.        +=hz++.(++=BNNNNNNNDhhz+        .=B(
+        .sB<        '+'..(<<+zDNNz<+++++'         +Dz'
+            +hD(       +zND(  'zDBhsBDssNNz'      +hD+
+            +zD<.      +hNDhh( <z. +=ss+     .<Dh(
+                '=Bz(.     '+'  +(DD        .(sBs+
+                    +=Dz++        (++    .++zDs+
+                    .<sDhs=>+'    '+<shDs<.
+                        .+<=zDDDDz=<+.
+    -->
+
+    <!-- <link rel="shortcut icon" href="{{absoluteUrl "/packages/ohif_viewerbase/assets/favicon.ico"}}" type="image/x-icon" /> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>

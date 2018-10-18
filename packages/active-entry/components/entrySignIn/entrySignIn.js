@@ -17,7 +17,8 @@ Router.route('/sign-in', {
 //==================================================================================================
 // COMPONENT OUTPUTS
 
-
+Template.entrySignIn.onCreated(() => {
+});
 
 
 Template.entrySignIn.helpers({

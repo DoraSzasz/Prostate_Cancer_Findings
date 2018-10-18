@@ -1,7 +1,11 @@
 <template name="ohifViewer">
     {{#header headerClasses=instance.headerClasses}}
         {{#section 'brand'}}
-            <div class="logo-text">Cancer findings in mp-MRI images</div>
+            <img src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo.png"}} width="12%">
+            <!-- <svg class="logo-image">
+                <use xlink:href={{absoluteUrl "/packages/ohif_viewerbase/assets/shield.svg#icon-ohif-logo"}}></use>
+            </svg> -->
+            <div class="logo-text">Prostate Cancer Finder</div>
         {{/section}}
         {{#section 'headerAfterBrand'}}
             {{#if studyListToggleText}}
@@ -10,16 +14,53 @@
                 </a>
             {{/if}}
         {{/section}}
-        {{#section 'headerMenu'}}
+        <!-- {{#section 'headerMenu'}}
             <span class="user-name pull-left m-r-1">{{userName}}</span>
             <span class="header-options pull-left m-r-1"> | </span>
             <span class="header-options pull-left m-r-1">Options</span>
             <div class="menu-toggle pull-right">
                 <span class="caret-down"></span>
             </div>
-        {{/section}}
+        {{/section}} -->
     {{/header}}
-    {{#if inStudyList}}
-    {{/if}}
+    <!-- {{#if inStudyList}}
+        <br>
+        <div id="how-to">
+            <div id="how-to-content">
+                <br>
+                <p>
+                  Double-click to select a patient:
+                </p>
+                <br>
+            </div>
+        </div>
+        <br>
+    {{/if}} -->
     {{>Template.dynamic template=(choose this.template 'studylist') data=this}}
+
+    <footer class="main_footer">
+            <div class="main_footer_wrapper">
+                <div class="container">
+                    <div class="copyright">
+                        <div>
+                            <img src="{{absoluteUrl "/packages/ohif_viewerbase/assets/rcc_powered_maroon.png"}}" alt="Research Computing Center (RCC) at The University of Chicago" title="Research Computing Center (RCC) at The University of Chicago" width="85%">
+                        </div>
+                        Copyright © 2018 <a href="https://rcc.uchicago.edu/" target="_blank"> Research Computing Center(RCC) at the University of Chicago </a>. All Rights Reserved. </div>
+        
+                    <div class="sidebar_footer">
+                        <div class="footer_socials social_icons">
+                            <ul>
+                                <li><a class="facebook" target="_blank" href="https: //www.facebook.com/The-University-of-Chicago-Research-Computing-Center-498755713533665/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a class="twitter" target="_blank" href="https://twitter.com/uchicago_rcc" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                        <!-- .social_icons -->
+                    </div>
+        
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+            <!-- .main_footer_wrapper -->
+    </footer>
 </template>

@@ -13,7 +13,6 @@ Router.route('/sign-up', {
 //==================================================================================================
 
 
-
 Template.entrySignUp.helpers({
   getSignUpMessageColor: function (){
     if (ActiveEntry.errorMessages.get('signInError')) {
