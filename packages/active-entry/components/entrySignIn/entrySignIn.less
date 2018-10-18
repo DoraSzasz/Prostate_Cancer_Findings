@@ -194,3 +194,32 @@ footer.sidebar_footer .copyright,
 div.sidebar_footer .copyright {
     padding-top: 40px;
 }
+
+/* Underline Text */
+.sec-line{
+	position: relative;
+	width: 90px;
+	height: 1px;
+	background: #888;
+	margin: 30px auto;
+}
+.sec-line:after{
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 1px;
+	background: #888;
+	top: -6px;
+	left: 18px;
+}
+
+
+.sec-line:before{
+	position: absolute;
+	content: "";
+	width: 50px;
+	height: 1px;
+	background: #888;
+	bottom: -6px;
+	left: 18px;
+}
