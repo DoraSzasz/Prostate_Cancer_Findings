@@ -101,7 +101,7 @@ Template.toolbarSection.helpers({
 
         buttonData.push({
             id: 'aiFiducial',
-            title: 'AI Probe',
+            title: 'AI Finding',
             classes: 'imageViewerTool',
             iconClasses: 'fa fa-magic'
         });

@@ -1,7 +1,7 @@
 <template name="ohifViewer">
     {{#header headerClasses=instance.headerClasses}}
         {{#section 'brand'}}
-            <div class="logo-text">Significant findings in mp-MRI images</div>
+            <div class="logo-text">Cancer findings in mp-MRI images</div>
         {{/section}}
         {{#section 'headerAfterBrand'}}
             {{#if studyListToggleText}}
@@ -20,17 +20,6 @@
         {{/section}}
     {{/header}}
     {{#if inStudyList}}
-        <br>
-        <div id="how-to">
-            <div id="how-to-content">
-                <br>
-                <p>
-                  Double-click to select a patient:
-                </p>
-                <br>
-            </div>
-        </div>
-        <br>
     {{/if}}
     {{>Template.dynamic template=(choose this.template 'studylist') data=this}}
 </template>
