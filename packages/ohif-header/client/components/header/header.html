@@ -1,12 +1,26 @@
 <template name="header">
-    <div class="header noselect {{reactive headerClasses}}">
-        <div class="clearfix">
-            <a target='_blank' class="brand pull-left" href="{{choose this.brandHref '/'}}">
-                {{>section 'brand'}}
-            </a>
-            {{>section 'headerAfterBrand'}}
-            <a href='#' class="header-menu pull-right">{{>section 'headerMenu'}}</a>
+    <nav class="header navbar navbar-inverse {{reactive headerClasses}}">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a target='_blank' class="navbar-brand" href="{{choose this.brandHref '/'}}">
+                    {{>section 'brand'}}
+                </a>
+                {{>section 'headerAfterBrand'}}                
+            </div>
+            <div id="navbar" class="navbar-collapse collapse navbar-right">
+                <a href='#' class="header-menu pull-right">{{>section 'headerMenu'}}</a>
+                <div class="navbar-form navbar-right" id="btnDemo">
+                </div>
+            </div>
+            <!--/.navbar-collapse -->
         </div>
         {{>UI.contentBlock}}
-    </div>
+    </nav>
 </template>

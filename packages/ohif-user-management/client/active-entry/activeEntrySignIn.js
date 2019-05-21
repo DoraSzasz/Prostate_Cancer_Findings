@@ -13,8 +13,8 @@ Template.entrySignIn.hooks({
         let btnTestDrive = $('<button/>', {
             id: 'btnTestDrive',
             text: 'Demo',
-            class: 'btn btn-primary',
-            style: 'position: absolute; width: 150px; top: 60px; right: 20px; padding-left: 0;',
+            class: 'btn btn-success',
+            style: 'width: 150px;', //  style: 'position: absolute; width: 150px; top: 60px; right: 20px; padding-left: 0;',
             title: 'Login with Demo User',
             click: function () {
                 // Login with demo user
@@ -22,7 +22,7 @@ Template.entrySignIn.hooks({
             }
         });
 
-        const entrySignIn = this.find('#entrySignIn');
+        const entrySignIn = this.find('#btnDemo');
         $(entrySignIn).append(btnTestDrive);
     }
 

@@ -1,23 +1,23 @@
 <template name="entrySignIn">
-        {{#header headerClasses='header-big'}}
-        {{#section 'brand'}}
-            <!-- <img class="img-responsive" src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo.png"}} width="12%"> -->
-            <!-- <svg class="logo-image">
+    {{#header headerClasses='navbar-fixed-top'}}
+    {{#section 'brand'}}
+    <!-- <img class="img-responsive" src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo.png"}} width="12%"> -->
+    <!-- <svg class="logo-image">
                 <use xlink:href={{absoluteUrl "/packages/ohif_viewerbase/assets/shield.svg#icon-ohif-logo"}}></use>
             </svg> -->
-            <!-- <svg class="logo-image">
+    <!-- <svg class="logo-image">
                 <use xlink:href={{absoluteUrl "/packages/ohif_viewerbase/assets/shield.svg#icon-ohif-logo"}}></use>
             </svg> -->
-            <div class="logo-text">Prostate Cancer Finder</div>
-        {{/section}}
-        {{#section 'headerAfterBrand'}}
+    Prostate Cancer Finder
+    {{/section}}
+    <!--{{#section 'headerAfterBrand'}}
             {{#if studyListToggleText}}
                 <a href="#" class="btn studyListLinkSection pull-left js-toggle-studyList">
                     {{studyListToggleText}}
                 </a>
             {{/if}}
         {{/section}}
-        <!-- {{#section 'headerMenu'}}
+    {{#section 'headerMenu'}}
             <span class="user-name pull-left m-r-1">{{userName}}</span>
             <span class="header-options pull-left m-r-1"> | </span>
             <span class="header-options pull-left m-r-1">Options</span>
@@ -29,28 +29,54 @@
 
     <div id="entrySignIn" class="page" style="{{getOpacityWithCorner}}">
         <div class="content-scrollable">
-            <div>
-                <img class="img-responsive" src="{{absoluteUrl "/packages/ohif_viewerbase/assets/banner.png"}}" alt="PCa Finder" title="PCa Finder" width="100%">
-            </div>                
-            <br>
-            <div id="how-to">
-                <div id="how-to-content">
-                    <br>
-                    <h2 class="text-center">
-                        <span>About us</span>
-                    </h2>
+            <!-- Carousel ================================================== -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img class="carousel-item" src="{{absoluteUrl "/packages/ohif_viewerbase/assets/banner.png"}}"
+                            alt="Prostate Cancer(PCa) Finder Interface">
+                        <div class="slide_description">
+                            <div class="carousel-caption">
+                                <h1>Prostate Cancer Finder</h1>
+                                <p>A web application for identification of clinically significant prostate cancer in
+                                    MRI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.carousel -->
+
+            <div class="container">
+
+                <!-- Main component for a primary marketing message or call to action -->
+                <div class="jumbotron">
+                    <h1 class="text-center">About us</h1>
                     <div class="sec-line" style="visibility: visible;"></div>
                     <p>
-                        Prostate cancer (PCa) is one of the major causes of cancer death for men. Multi-parametric MRI (mpMRI) is increasingly being used for PCa diagnosis. While mpMRI is very good at detecting prostate cancers, still 15-30% of clinically significant cancers can be missed even by expert radiologists. The current state of prostate mpMRI is based on the subjective assessment by radiologists that need extensive training. Artificial intelligence and computer aided diagnosis tools have been investigated for PCa diagnosis using mpMRI data to mitigate the problems with variability in PCa diagnosis among radiologists. Numerous studies have shown promising results, however low specificity and high false positive rates remain to be a major concern limiting wide spread use of mpMRI for screening and diagnosis of PCa.
+                        Prostate cancer (PCa) is one of the major causes of cancer death for men. Multi-parametric MRI
+                        (mpMRI) is increasingly being used for PCa diagnosis. While mpMRI is very good at detecting
+                        prostate cancers, still 15-30% of clinically significant cancers can be missed even by expert
+                        radiologists. The current state of prostate mpMRI is based on the subjective assessment by
+                        radiologists that need extensive training. Artificial intelligence and computer aided diagnosis
+                        tools have been investigated for PCa diagnosis using mpMRI data to mitigate the problems with
+                        variability in PCa diagnosis among radiologists. Numerous studies have shown promising results,
+                        however low specificity and high false positive rates remain to be a major concern limiting wide
+                        spread use of mpMRI for screening and diagnosis of PCa.
                     </p>
-                    <hr>
-                    <p>
-                        Newly developed deep learning techniques could potentially be very useful in improving PCa diagnosis. In this demo, we developed a tool that automatically detects if a mp-MRI image contains cancerous region, using texture feature extraction methods. A neuronal network model  was trained using texture features extracted on different image series (e.g., T2, ADC, DCE) for each patient. For training and testing, data sets of 300 patients were used and a region was determined to be clinically significant cancer if the biopsy Gleason Score was 3+4 or higher. Texture features were extracted, based on the gray level co-occurrence matrix (GLCM). These features (more than 10 000 samples) were used to train the model. 3D Convolutional Neural Network and ShallowNet architectures were used, using Keras library.
-                    </p>
-                    <br>
+                    <hr class="featurette-divider">
+                    <p>Newly developed deep learning techniques could potentially be very useful in improving PCa
+                        diagnosis. In this demo, we developed a tool that automatically detects if a mp-MRI image
+                        contains cancerous region, using texture feature extraction methods. A neuronal network model
+                        was trained using texture features extracted on different image series (e.g., T2, ADC, DCE) for
+                        each patient. For training and testing, data sets of 300 patients were used and a region was
+                        determined to be clinically significant cancer if the biopsy Gleason Score was 3+4 or higher.
+                        Texture features were extracted, based on the gray level co-occurrence matrix (GLCM). These
+                        features (more than 10 000 samples) were used to train the model. 3D Convolutional Neural
+                        Network and ShallowNet architectures were used, using Keras library.</p>
+
                 </div>
+
             </div>
-            <br>       
         </div>
     </div>
 
@@ -59,24 +85,40 @@
             <div class="container">
                 <div class="copyright">
                     <div>
-                        <img src={{absoluteUrl "/packages/ohif_viewerbase/assets/rcc_powered_maroon.png"}} alt="Research Computing Center (RCC) at The University of Chicago" title="Research Computing Center (RCC) at The University of Chicago" width="85%">
+                        <img src={{absoluteUrl "/packages/ohif_viewerbase/assets/rcc_powered_maroon.png"}}
+                            alt="Research Computing Center (RCC) at The University of Chicago"
+                            title="Research Computing Center (RCC) at The University of Chicago" width="85%">
                     </div>
-                    Copyright © 2018 <a href="https://rcc.uchicago.edu/" target="_blank"> Research Computing Center(RCC) at the University of Chicago </a>. All Rights Reserved. </div>
-    
+                    Copyright © 2019 <a href="https://rcc.uchicago.edu/" target="_blank">Research Computing Center(RCC)
+                        at the University of Chicago</a>. All Rights Reserved.
+                </div>
+
                 <div class="sidebar_footer">
                     <div class="footer_socials social_icons">
                         <ul>
-                            <li><a class="facebook" target="_blank" href="https: //www.facebook.com/The-University-of-Chicago-Research-Computing-Center-498755713533665/" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" target="_blank" href="https://twitter.com/uchicago_rcc" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="facebook" target="_blank"
+                                    href="https: //www.facebook.com/The-University-of-Chicago-Research-Computing-Center-498755713533665/"
+                                    title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" target="_blank" href="https://twitter.com/uchicago_rcc"
+                                    title="Twitter"><i class="fa fa-twitter"></i></a></li>
                         </ul>
                     </div>
                     <!-- .social_icons -->
                 </div>
-    
+
                 <div class="clear">
                 </div>
             </div>
         </div>
         <!-- .main_footer_wrapper -->
     </footer>
+
+    <div class="container-fluid" id="footer-bottom">
+        <div class="clearfix">
+            <div id="footer-info">This website is designed &amp; developed by the Research Computing Center
+                (RCC) at
+                The University of Chicago. Please send any comments &amp; feedback to <a
+                    href="mailto:appdev@rcc.uchicago.edu?Subject=1919map">appdev@rcc.uchicago.edu</a>.</div>
+        </div> <!-- .container-fluid -->
+    </div>
 </template>
