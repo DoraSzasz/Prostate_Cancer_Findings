@@ -4,33 +4,32 @@ ProstateCancer.ai is a web application for identification of clinically signific
 
 Installation
 ---------
-What you need:
+**What you need:**
 
-1. DICOM server (dcm4che or Orthnac)
+1. Nodejs
 2. Meteor to run the app
+3. If you want to use DICOM server (dcm4che or Orthnac) [*Optional*]
 
 
-How to start the app:
+**How to start the app:**
 
 1. Install Nodejs : https://nodejs.org/en/download/
 
 2. Install Meteor : https://www.meteor.com/install
-	- First install ** Chocolatey **, then run this command using an * Administrator command prompt *: 
+	- First install **Chocolatey**, then run this command using an **Administrator command prompt**: 
 	````
 	@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 	````	
 3. In the app directory:
     * to install npm packages run: `meteor npm install`
 	
-4. Finally, run this command using an <span style="color:red"><em>General command</em> prompt</span>: 
-	````
-		meteor
-	````
+4. Finally, run this command using an **General command prompt**: `meteor`
 
 ----------------------------
-In the app directory:
-    * for orthanc run: `METEOR_PACKAGE_DIRS="packages" meteor`
-    * for dcm4chee run: `METEOR_PACKAGE_DIRS="packages" meteor --settings config/dcm4cheeDICOMWeb.json`
+**If you want to use your own DICOM server setup then In the app directory:**
+
+	* for orthanc run: `METEOR_PACKAGE_DIRS="packages" meteor`
+	* for dcm4chee run: `METEOR_PACKAGE_DIRS="packages" meteor --settings config/dcm4cheeDICOMWeb.json`
     
 For Developers
 ---------
