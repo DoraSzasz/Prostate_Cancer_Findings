@@ -12,10 +12,23 @@ What you need:
 
 How to start the app:
 
-1. In the app directory:
-    * to install npm packages run: `meteor npm install`
+1. Install Nodejs : https://nodejs.org/en/download/
 
-2. In the app directory:
+2. Install Meteor : https://www.meteor.com/install
+	- First install ** Chocolatey **, then run this command using an * Administrator command prompt *: 
+	````
+	@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+	````	
+3. In the app directory:
+    * to install npm packages run: `meteor npm install`
+	
+4. Finally, run this command using an <span style="color:red"><em>General command</em> prompt</span>: 
+	````
+		meteor
+	````
+
+----------------------------
+In the app directory:
     * for orthanc run: `METEOR_PACKAGE_DIRS="packages" meteor`
     * for dcm4chee run: `METEOR_PACKAGE_DIRS="packages" meteor --settings config/dcm4cheeDICOMWeb.json`
     
