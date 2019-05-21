@@ -16,7 +16,7 @@ Installation
 1. Install Nodejs : https://nodejs.org/en/download/
 
 2. Install Meteor : https://www.meteor.com/install
-	- First install **Chocolatey**, then run this command using an **Administrator command prompt**: 
+	- First install **Chocolatey**, by runingn this command using an **Administrator command prompt**: 
 	````
 	@"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
 	````	
