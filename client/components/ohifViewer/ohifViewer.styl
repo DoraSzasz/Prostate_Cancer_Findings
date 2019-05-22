@@ -53,8 +53,13 @@ body>.header
 
   .studyListLinkSection
     theme('border-left', '%s solid $uiBorderColor' % $uiBorderThickness)
-    margin: 3px 0 0 10px
-    padding: 0 0 0 10px
+    margin: 10px 0 0 0
+    border-left: 1px solid #44626f;
+    padding: 15px 0px 15px 15px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 0px;
+    
 
   &.header-big
     padding-left: $studyListPadding
@@ -71,14 +76,6 @@ body>.header
 
       .logo-text
         font-size: 30px
-
-    .studyListLinkSection
-      border: none
-      left: 0
-      margin: 0
-      padding: 0
-      position: absolute
-      top: 0
 
 #how-to
   _color: white
