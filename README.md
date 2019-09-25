@@ -1,6 +1,6 @@
-# ProstateCancer.ai
+# Prostate Cancer Findings
 
-ProstateCancer.ai is a web application for identification of clinically significant prostate cancer in MRI, developed on Tesseract-MI platform. 
+Prostate Cancer Findings is a web application for identification of clinically significant prostate cancer in MRI, developed on Tesseract-MI platform. 
 
 Installation
 ---------
