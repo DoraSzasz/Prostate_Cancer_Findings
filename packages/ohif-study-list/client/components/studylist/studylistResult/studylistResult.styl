@@ -1,11 +1,11 @@
 @import "{ohif:design}/app"
 
-$tableHoverColor = #2c363f
-$tableTextPrimaryColor = white
+$tableHoverColor = #555555
+$tableTextPrimaryColor = #555555
 $tableTextSecondaryColor = #91b9cd
 
-$inputBackgroundColor = #2c363f
-$inputPlaceholderColor = lightgray
+$inputBackgroundColor = #ffffff
+$inputPlaceholderColor = #555555
 
 $studyListToolbarHeight = 75px
 $bodyCellHeight = 40px
@@ -122,7 +122,7 @@ $bodyCellHeight = 40px
             margin: 0 5px 20px 5px
             padding: 0 20px
             cursor: pointer
-            border: none
+            _border: none
             background-color: $inputBackgroundColor
             color: $inputPlaceholderColor
             font-size: 10pt
@@ -148,12 +148,14 @@ $bodyCellHeight = 40px
     tbody
       tr
         padding: 5px
-        background-color: black
+        background-color: $tableHoverColor
 
         &:nth-child(even)
           theme('background-color', '$uiGrayDarker')
 
         td
+          font-size: 18px
+          background-color: $inputBackgroundColor
           height: $bodyCellHeight
           line-height: $bodyCellHeight
           color: $tableTextPrimaryColor
@@ -165,13 +167,14 @@ $bodyCellHeight = 40px
 
         &:hover, &:active, &.active
           background-color: $tableHoverColor
-          color: white
+          color: $inputBackgroundColor
 
           td
             // This selector is necessary to override bootstrap's 'table' class
             border-top: 1px solid #436270
             border-bottom: 1px solid #436270
             background-color: $tableHoverColor
+            color: $inputBackgroundColor
 
 @media only screen and (max-width: 1362px)
   $tablePadding = 5%

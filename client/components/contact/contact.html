@@ -1,0 +1,143 @@
+<template name="contact">
+    {{#header headerClasses='navbar-fixed-top'}}
+
+    {{/header}}
+
+    <div id="entrySignIn" class="page" style="background-color: #ffffff;{{getOpacityWithCorner}} ">
+        <div class="content-scrollable">
+            <!-- Carousel ================================================== -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div align="center">
+                            <img src="contact1.jpg" alt="" style="background-color: #031527;width: -webkit-fill-available;width:-moz-available;height:50rem;">
+                        </div>
+                        <div class="slide_description">
+                            <div class="carousel-caption" inner>
+                                <h1>Contact Us</h1>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.carousel -->
+            <main role="main">
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 mb-5"  data-aos="fade">
+
+
+
+                            <form action="#" class="p-5 bg-white" style="margin-top: -150px;">
+
+
+                                <div class="row form-group">
+                                    <div class="col-md-6 mb-3 mb-md-0">
+                                        <label class="text-black" for="fname">First Name</label>
+                                        <input type="text" id="fname" class="form-control">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-black" for="lname">Last Name</label>
+                                        <input type="text" id="lname" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+
+                                    <div class="col-md-12">
+                                        <label class="text-black" for="email">Email</label>
+                                        <input type="email" id="email" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+
+                                    <div class="col-md-12">
+                                        <label class="text-black" for="subject">Subject</label>
+                                        <input type="subject" id="subject" class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label class="text-black" for="message">Message</label>
+                                        <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <button id="learnmore1" onclick="location.href='/dicomm'" class="btn btn-success" style="width: 150px;background-color:#800000;border-color:#ffffff;margin-left: 20rem;" title="Incidence">Send Message</button>
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="col-md-5"  data-aos="fade" data-aos-delay="100">
+
+                            <div class="p-4 mb-3 bg-white">
+                                <p class="mb-0 font-weight-bold">Address</p>
+                                <p class="mb-4">5607 S Drexel Ave, Chicago, IL 60637, USA</p>
+
+                                <p class="mb-0 font-weight-bold">Phone</p>
+                                <p class="mb-4"><a href="#">(773) 795-2667</a></p>
+
+                                <p class="mb-0 font-weight-bold">Email Address</p>
+                                <p class="mb-0"><a href="#"> help@rcc.uchicago.edu</a></p>
+
+                            </div>
+
+                            <div class="p-4 mb-3 bg-white">
+                                <h3 class="h5 text-black mb-3">More Info</h3>
+                                <p>The Research Computing Center (RCC) is dedicated to providing the University of Chicago community a full-service high-performance computing (HPC) center, including visualization resources, access to software, workshops, one-on-one consulting with domain experts, and complete data-management strategies to researchers across all departments and divisions</p><button id="learnmore1" onclick="location.href='/dicomm'" class="btn btn-success" style="width: 150px;background-color:#800000;border-color:#ffffff;margin-left: 20rem;" title="Incidence">Learn More</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div> <!-- /container -->
+            </main>
+        </div>
+    </div>
+
+    <!-- FOOTER BEGINS -->
+    <footer id="footer" class="footer" style="background-image: url({{absoluteUrl '/packages/ohif_viewerbase/assets/footer-bg.png'}});">
+        <div class="container">
+            <div class="row" style="padding: 8rem 0 8rem 0;">
+                <div class="col-md-4 col-lg-4">
+                    <a href="https://www.uchicago.edu/"><img
+                            src={{absoluteUrl "/packages/ohif_viewerbase/assets/footer_logo.png"}}
+                            alt="University of Chicago" class="footer-logo"></a>
+                </div>
+
+                <div class="col-md-3 col-lg-3">
+                    <a href="https://www.lenovo.com/us/en/"><img
+                            src={{absoluteUrl "/packages/ohif_viewerbase/assets/lenovo_logo_white.png"}}
+                            alt="RSNA Educational Application" class="img-fluid footer-logo lenovo-logo"></a>
+                </div>
+
+                <div class="col-md-5 col-lg-5">
+                    <a href="https://rcc.uchicago.edu/"><img
+                            src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo_RCC.png"}}
+                            alt="Research Computing Center (RCC) at The University of Chicago" class="footer-logo"></a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container-fluid"
+            style="padding:.5rem!important; background: rgb(24, 24, 24) none repeat scroll 0% 0%!important;">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <p style="color: #fff!important;padding-top: 10px;">Copyright &copy;2019 <a
+                            href="https://rcc.uchicago.edu/" target="_blank">Research Computing Center, The University
+                            of Chicago</a>. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER ENDS -->
+</template>

@@ -8,7 +8,7 @@
     display: block
     z-index: 1000
     transform(scale(0))
-    transition(transform 0.3s ease)
+    transition(transform 0.3s ease)    
 
     &.dropdown-menu-left, &.origin-top-left
       transform-origin(0% 0%)
@@ -32,10 +32,23 @@
         max-width: 18px
         max-height: 18px
         vertical-align: middle
+  
+  &.open
+    color: #fff
+
+    &>a
+      background-color: transparent !important
+    
+      &:focus
+        background-color: transparent !important
+
+      &:hover
+        background-color: transparent !important   
 
   &.open>ul.dropdown-menu
     transform(scale(1))
-
+    border-top-left-radius: 4px !important
+    border-top-right-radius: 4px !important
 
 .dropdown-submenu
 

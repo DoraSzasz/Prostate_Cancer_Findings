@@ -12,10 +12,10 @@ Template.entrySignIn.hooks({
         // Create Test Drive button dynamically
         let btnTestDrive = $('<button/>', {
             id: 'btnTestDrive',
-            text: 'Demo',
+            text: 'Explore Now',
             class: 'btn btn-success',
             style: 'width: 150px;', //  style: 'position: absolute; width: 150px; top: 60px; right: 20px; padding-left: 0;',
-            title: 'Login with Demo User',
+            title: 'Explore Study lists',
             click: function () {
                 // Login with demo user
                 ActiveEntry.signIn('demo@ohif.org', '12345678aA*');

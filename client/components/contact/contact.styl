@@ -39,40 +39,17 @@ body>.header
 
   .btn
     _theme('color', '$textSecondaryColor')
-    _color: white    
-    _font-size: 13px
-    _font-weight: 500
-    _line-height: 26px
-
-    padding: 10px 10px;
-    font-size: 18px;
-    border: 2px solid #ffffff !important;
+    color: white
     cursor: pointer
-    color: #ffffff
-    background: #39b49a
-    border: #39b49a
-    background: -moz-linear-gradient(left, #39b49a 0%, #1d86df 100%)
-    background: -webkit-linear-gradient(left, #39b49a 0%, #1d86df 100%)
-    background: linear-gradient(to right, #39b49a 0%, #1d86df 100%)
+    font-size: 13px
+    font-weight: 500
+    line-height: 26px
 
     &:hover
       theme('color', '$hoverColor')
-      background-position: 100px
-      color: #ffffff
-      background: #1d86df
-      background: -moz-linear-gradient(left, #1d86df 0%, #39b49a 100%)
-      background: -webkit-linear-gradient(left, #1d86df 0%, #39b49a 100%)
-      background: linear-gradient(to right, #1d86df 0%, #39b49a 100%)
 
     &:active
       theme('color', '$activeColor')
-      background-position: 100px
-      color: #ffffff
-      background: #1d86df
-      background: -moz-linear-gradient(left, #1d86df 0%, #39b49a 100%)
-      background: -webkit-linear-gradient(left, #1d86df 0%, #39b49a 100%)
-      background: linear-gradient(to right, #1d86df 0%, #39b49a 100%)
-      
 
   .studyListLinkSection
     theme('border-left', '%s solid $uiBorderColor' % $uiBorderThickness)

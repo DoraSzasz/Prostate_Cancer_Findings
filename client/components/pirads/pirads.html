@@ -1,0 +1,329 @@
+<template name="pirads">
+    {{#header headerClasses='navbar-fixed-top'}}
+
+    {{/header}}
+
+    <div id="entrySignIn" class="page" style="background-color: #ffffff;{{getOpacityWithCorner}} ">
+        <div class="content-scrollable">
+            <!-- Carousel ================================================== -->
+   <!--         <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <div align="center">
+                            <img src="bgi.jpeg" alt="" style="width: 100%;height:50rem" >
+                        </div>
+
+                    </div>
+                </div>
+            </div>&lt;!&ndash; /.carousel &ndash;&gt;-->
+            <main role="main">
+
+
+                <div class="container">
+                    <section id="team" class="pb-5">
+                        <div class="container">
+
+                            <div class="row">
+                                <!-- R1 -->
+
+                                <div class="col-lg-6 mx-auto p-5 textcontent">
+
+                                    <h1>PI-RADS v2</h1>
+
+                                    <p>Multiparametric MRI (mpMRI) is increasingly used for prostate cancer diagnosis and guiding biopsies.
+                                        Multiparametric MRI is a combination of T2-weighted, Diffusion and dynamic contrast-enhanced imaging
+                                        and is an accurate tool in the detection of clinically significant prostate cancer. However, there
+                                        is a lot of variation in image acquisition.</p>
+                                    <p>The introduction of the Prostate Imaging Reporting and Data System (PI-RADS) classification for
+                                        prostate MRI in 2012 lead to a more standardized acquisition, interpretation and reporting of
+                                        prostate MRI. Since then, this classification system has been revised and simplified in 2015 and is
+                                        still evolving, based on data analysis of multiparametric prostate MRI. The most recent mpMRI
+                                        acquisition protocol and interpretation guidelines were recently recommended by American College of
+                                        Radiology and European Society of Urogenital Radiology in the consensus guidelines: Prostate Imaging
+                                        - Reporting and Data System (PI-RADS v2) <a href="#1"><sup>[1]</sup></a>. The PI-RADS assessment
+                                        category determines the likelihood of clinically significant prostate cancer, which is defined as a
+                                        tumor with a Gleason score of 7 or more.</p>
+
+                                    <table class="table table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">PI-RADS Score</th>
+                                            <th scope="col" colspan="2">Meaning</th>
+
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Very low</td>
+                                            <td>Clinically significant cancer is highly unlikely to be present</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Low</td>
+                                            <td>Clinically significant cancer is unlikely to be present</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Intermediate</td>
+                                            <td>The presence of clinically significant cancer is equivocal</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>High</td>
+                                            <td>Clinically significant cancer is likely to be present</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Very high</td>
+                                            <td>Clinically significant cancer is highly likely to be present</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>Assignment of a PI-RADS assessment category for each lesion is based on the scoring of T2w, DWI/ADC,
+                                        and DCE sequences, according to zonal anatomy.</p>
+                                    <br>
+
+                                    <h2>PI-RADS v2 Assessment: Peripheral Zone (PZ)</h2>
+                                    <table class="table table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">DWI</th>
+                                            <th scope="col">DCE</th>
+                                            <th scope="col">PI-RADS</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>&nbsp;</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>&nbsp;</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>- <br> +</td>
+                                            <td>3 <br> 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>&nbsp;</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>&nbsp;</td>
+                                            <td>5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>The peripheral zone is situated on the posterior and lateral side of the prostate, surrounding the
+                                        transition zone. For the peripheral zone the DWI/ADC is the primary determining sequence (dominant
+                                        sequence) to assign the PI-RADS assessment category. Since the dominant sequence for PI-RADS
+                                        assessment in the peripheral zone is different from the transition zone, identification of the zonal
+                                        location of a lesion is vital. In the peripheral zone an equivocal lesion (PI-RADS category 3) is
+                                        assigned to PI-RADS category 4 if DCE is positive, i.e focal or earlier contrast enhancement. The
+                                        lesion remains assigned to PI-RADS category 3 if the DCE is negative, i.e. no early enhancement or
+                                        diffuse enhancement and not corresponding to the focal T2W / DWI lesion or focal enhancement
+                                        corresponding to BPH.</p>
+
+                                    <br>
+                                    <h2>PI-RADS v2 Assessment: Transition Zone (TZ)</h2>
+                                    <table class="table table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">T2W</th>
+                                            <th scope="col">DWI</th>
+                                            <th scope="col">PI-RADS</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>&nbsp;</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>&nbsp;</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>≤4<br> 5</td>
+                                            <td>3 <br> 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>&nbsp;</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>&nbsp;</td>
+                                            <td>5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                    <p>The transition zone surrounds the prostatic urethra and enlarges in aging men as a result of benign
+                                        prostatic hyperplasia. For the transition zone the T2w imaging is the primary determining sequence
+                                        (dominant sequence) to assign the PI-RADS assessment category.</p>
+                                    <p>In the transitional zone an equivocal lesion (PI-RADS category 3) is assigned to PI-RADS category 4
+                                        if the DWI corresponds with category 5 (markedly intense greater than 1.5cm). The lesion remains
+                                        assigned to PI-RADS category 3 if the DWI corresponds to DWI category 4 (markedly intense but less
+                                        than 1.5cm) or a lower category.</p>
+                                    <br>
+
+                                    <h2>PI-RADS v2 Assessment of DWI</h2>
+                                    <table class="table table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Score</th>
+                                            <th scope="col">Peripheral Zone (PZ) or Transition Zone (TZ)</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>No abnormality (i.e., normal) on ADC and high b-value DWI</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Indistinct hypointense on ADC</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Focal mildly/moderatly hypointense on ADC and isointense/mildly hyperintense on high b-value
+                                                DWI
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Focal markedly hypointense on ADC and markedly hyperintense on high b-value DWI; &lt;1.5cm
+                                                in greatest dimenson
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Same as 4 but ≥1.5cm in greatest dimension or definite extraprostatic extension/invasive
+                                                behavior
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <h2>PI-RADS v2 Assessment of T2W-TZ</h2>
+                                    <table class="table table-sm">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Score</th>
+                                            <th scope="col">Transition Zone (TZ)</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Homogeneous intermediate signal intensity (normal)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Circumscribed hypointense or heterogeneous encapsulated nodule(s) (BPH)</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Heterogeneous signal intensity with obscured margins; includes others that doe not qualify
+                                                as 2, 4, or 5
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>Lenticular or non-circumscribed, homogeneous, moderately hypointense, and &lt;1.5cm in
+                                                greatest dimension
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>Same as 4 but ≥1.5cm in greatest dimension or definite extraprostatic extension/invasive
+                                                behavior
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <hr>
+                                    <a data-target="#modalIMG" data-toggle="modal" href="#" class="color-gray-darker td-hover-none">
+                                        <figure class="figure text-center d-block">
+                                            <img src="/static/rsna/images/zones.png" class="img-fluid" alt="Zones of the Prostate">
+                                            <figcaption class="figure-caption">Zonal Anatomy of the Prostate</figcaption>
+                                        </figure>
+                                    </a>
+
+                                    <div aria-hidden="true" aria-labelledby="enlargeImgModal" class="modal fade" id="modalIMG" role="dialog" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body">
+                                                    <button type="button" class="close d-block" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                                                    </button>
+                                                    <img src="/static/rsna/images/zones.png" alt="Zones of the Prostate">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </section>
+
+                </div> <!-- /container -->
+            </main>
+        </div>
+    </div>
+
+    <!-- FOOTER BEGINS -->
+    <footer id="footer" class="footer" style="background-image: url({{absoluteUrl '/packages/ohif_viewerbase/assets/footer-bg.png'}});">
+        <div class="container">
+            <div class="row" style="padding: 8rem 0 8rem 0;">
+                <div class="col-md-4 col-lg-4">
+                    <a href="https://www.uchicago.edu/"><img
+                            src={{absoluteUrl "/packages/ohif_viewerbase/assets/footer_logo.png"}}
+                            alt="University of Chicago" class="footer-logo"></a>
+                </div>
+
+                <div class="col-md-3 col-lg-3">
+                    <a href="https://www.lenovo.com/us/en/"><img
+                            src={{absoluteUrl "/packages/ohif_viewerbase/assets/lenovo_logo_white.png"}}
+                            alt="RSNA Educational Application" class="img-fluid footer-logo lenovo-logo"></a>
+                </div>
+
+                <div class="col-md-5 col-lg-5">
+                    <a href="https://rcc.uchicago.edu/"><img
+                            src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo_RCC.png"}}
+                            alt="Research Computing Center (RCC) at The University of Chicago" class="footer-logo"></a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="container-fluid"
+            style="padding:.5rem!important; background: rgb(24, 24, 24) none repeat scroll 0% 0%!important;">
+            <div class="row text-center">
+                <div class="col-md-12">
+                    <p style="color: #fff!important;padding-top: 10px;">Copyright &copy;2019 <a
+                            href="https://rcc.uchicago.edu/" target="_blank">Research Computing Center, The University
+                            of Chicago</a>. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER ENDS -->
+</template>

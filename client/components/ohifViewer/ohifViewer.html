@@ -1,27 +1,21 @@
 <template name="ohifViewer">
     {{#header headerClasses=instance.headerClasses}}
         {{#section 'brand'}}
-            <!-- <img class="img-responsive" src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo.png"}} width="12%"> -->
-            <!-- <svg class="logo-image">
-                <use xlink:href={{absoluteUrl "/packages/ohif_viewerbase/assets/shield.svg#icon-ohif-logo"}}></use>
-            </svg> -->
-            Prostate Cancer Finder
+            <img src={{absoluteUrl "/packages/ohif_viewerbase/assets/logo.png"}} alt="PCa Finder: Prostate Cancer Finder" class="img-responsive">
         {{/section}}
-        {{#section 'headerAfterBrand'}}
+        <!-- {{#section 'headerAfterBrand'}}
             {{#if studyListToggleText}}
                 <a href="#" class="btn studyListLinkSection pull-left js-toggle-studyList">
                     {{studyListToggleText}}
                 </a>
             {{/if}}
         {{/section}}
-        {{#section 'headerMenu'}}
-            <!-- <span class="user-name pull-left m-r-1">{{userName}}</span> -->
-            <!-- <span class="header-options pull-left m-r-1"> | </span> -->
+        {{#section 'headerMenu'}}            
             <span class="header-options pull-left m-r-1">Options</span>
             <div class="menu-toggle pull-right">
                 <span class="caret-down"></span>
             </div>
-        {{/section}}
+        {{/section}} -->
     {{/header}}
     <!-- {{#if inStudyList}}
         <br>

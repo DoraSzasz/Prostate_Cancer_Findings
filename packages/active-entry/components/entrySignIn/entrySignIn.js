@@ -14,6 +14,38 @@ Router.route('/sign-in', {
   name: 'signInRoute'
 });
 
+Router.route('/segmentation', {
+  template: 'segmentation',
+  name: 'segmentation'
+});
+
+Router.route('/incidence', {
+  template: 'incidence',
+  name: 'incidence'
+});
+
+Router.route('/mpmri', {
+  template: 'mpmri',
+  name: 'mpmri'
+});
+
+Router.route('/pirads', {
+  template: 'pirads',
+  name: 'pirads'
+});
+
+Router.route('/team', {
+  template: 'team',
+  name: 'team'
+});
+
+Router.route('/contact', {
+  template: 'contact',
+  name: 'contact'
+});
+
+
+
 //==================================================================================================
 // COMPONENT OUTPUTS
 

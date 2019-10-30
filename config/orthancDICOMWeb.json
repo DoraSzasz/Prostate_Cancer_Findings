@@ -3,9 +3,9 @@
     "dicomWeb": [
       {
         "name": "Orthanc",
-        "wadoUriRoot": "http://localhost:8042/wado",
-        "qidoRoot": "http://localhost:8042/dicom-web",
-        "wadoRoot": "http://localhost:8042/dicom-web",
+        "wadoUriRoot": "http://pca-finder.staging.rcc.uchicago.edu:8042/wado",
+        "qidoRoot": "http://pca-finder.staging.rcc.uchicago.edu:8042/dicom-web",
+        "wadoRoot": "http://pca-finder.staging.rcc.uchicago.edu:8042/dicom-web",
         "qidoSupportsIncludeField": false,
         "imageRendering": "wadouri",
         "thumbnailRendering": "wadors",

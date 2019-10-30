@@ -4,23 +4,48 @@ body>.header
   height: $topBarHeight
   padding: 10px 10px 0
   theme('color', '$textPrimaryColor')
-  theme('background-color', '$primaryBackgroundColor')
-  transition(all 0.5s ease)
+  theme('background-color', '#800000')
+  transition(all 0.5s ease)    
+
+  .navbar-brand
+    padding: 0px 15px
+    height: 95px
+
+  .navbar-form
+    margin-top: 15px
 
   &>.clearfix
     position: relative
 
   .header-menu
-    padding: 15px 0
-    font-size: 13px
+    padding: 25px 0
+    font-size: 16px
     font-weight: 400
-    line-height: 18px
+    line-height: 21px
     text-decoration: none
-    theme('color', '$defaultColor')
+    theme('color', '$defaultColor')    
 
     &:empty
       display: none
 
+  .header-menu-default
+    padding: 25px 0
+    font-size: 16px
+    font-weight: 400
+    line-height: 21px
+    text-decoration: none
+    color: #fff !important
+
+    &:empty
+      display: none
+    
+    &:hover
+      color: #9d9d9d !important
+
+    &:focus
+      color: #9d9d9d !important    
+
   &.header-big
     _height: $topBarExpandedHeight
-    background-color: rgba(21, 25, 30, 0.7)
+    _background-color: rgba(21, 25, 30, 0.7)
+    margin-bottom: 0px

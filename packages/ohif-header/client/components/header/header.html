@@ -9,15 +9,41 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a target='_blank' class="navbar-brand" href="{{choose this.brandHref '/'}}">
+                <a target='_self' class="navbar-brand" href="{{absoluteUrl '/entrySignIn'}}">
                     {{>section 'brand'}}
                 </a>
-                {{>section 'headerAfterBrand'}}                
+                {{>section 'headerAfterBrand'}}
             </div>
-            <div id="navbar" class="navbar-collapse collapse navbar-right">
-                <a href='#' class="header-menu pull-right">{{>section 'headerMenu'}}</a>
+
+            <div id="navbar" class="navbar-collapse collapse">
+
                 <div class="navbar-form navbar-right" id="btnDemo">
                 </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a target='_self' href="{{absoluteUrl '/entrySignIn'}}" class="header-menu-default pull-left m-r-3">Home</a></li> <!-- class="active" -->
+                    <li><a target='_self' href="http://pca-finder.staging.rcc.uchicago.edu:8042/app/explorer.html#upload" class="header-menu-default pull-left m-r-3">Upload</a></li>
+                    <!-- <li><a href="#">Segmentation</a></li> -->
+                    <li class="dropdown">
+                        <a href="#" class="header-menu-default dropdown-toggle header-options pull-left m-r-3" data-toggle="dropdown"
+                            role="button" aria-haspopup="true" aria-expanded="false">Resources <span
+                                class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{{absoluteUrl '/segmentation'}}">Segmentation</a></li>
+                                <li role="separator" class="divider"></li>
+                                <!-- <li class="dropdown-header">Nav header</li> -->
+                                <li><a href="{{absoluteUrl '/incidence'}}">Incidence</a></li>
+                                <li><a href="{{absoluteUrl '/mpmri'}}">mpMRI</a></li>
+                                <li><a href="{{absoluteUrl '/pirads'}}">PI-RADS v2</a></li>
+                            </ul>
+                        
+                    </li>
+                    <li><a href="{{absoluteUrl '/team'}}" class="header-menu-default pull-left m-r-3">Team</a></li>
+                    <li><a href="{{absoluteUrl '/contact'}}" class="header-menu-default pull-left m-r-3">Contact</a></li>
+                    <!-- <li>                        
+                        <a href='#' class="header-menu pull-left">{{>section 'headerMenu'}}</a>
+                    </li> -->
+                </ul>
             </div>
             <!--/.navbar-collapse -->
         </div>
