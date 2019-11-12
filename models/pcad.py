@@ -9,8 +9,8 @@ import requests
 from flask_cors import CORS
 import tensorflow as tf
 
-sys.path.append(".\")
-sys.path.append("..\")
+sys.path.append("./")
+sys.path.append("../")
 
 import models.settings as S
 
@@ -27,7 +27,7 @@ def safe_mkdir(path):
 
 
 def cach_dicoms(info):
-    url = "http://162.243.174.237:8042/"
+    url = "http://pca-finder.staging.rcc.uchicago.edu:8042/"
     if info["case"] not in os.listdir(S.dicom_folder):
         patient_folder = os.path.join(S.dicom_folder, info["case"])
         safe_mkdir(patient_folder)
@@ -47,6 +47,7 @@ def cach_dicoms(info):
 
 model_uid_1 = "Densenet_T2_ABK_auc_08"
 model_uid_2 = "Densenet_T2_ABK_auc_079_nozone"
+model_uid_3 = "CNN3D"
 deployer1 = importlib.import_module(model_uid_1 + ".deploy").Deploy()
 model1 = deployer1.build()
 model1._make_predict_function()
@@ -54,6 +55,10 @@ model1._make_predict_function()
 deployer2 = importlib.import_module(model_uid_2 + ".deploy").Deploy()
 model2 = deployer2.build()
 model2._make_predict_function()
+
+deployer3 = importlib.import_module(model_uid_3 + ".deploy").Deploy()
+model3 = deployer3.build()
+model3._make_predict_function()
 
 
 @app.route('/predict', methods=['GET'])
@@ -68,6 +73,8 @@ def predict():
         result = deployer1.run(model1, info)
     elif info["model_name"] == model_uid_2:
         result = deployer2.run(model2, info)
+	elif info["model_name"] == model_uid_3:
+        result = deployer3.run(model3, info)
     return result
 
 
