@@ -1,5 +1,5 @@
 {
-  "model name": "3DCNN",
+  "model name": "CNN3D",
   "organ": "Prostate",
   "modality": "MRI",
   "task": "significant prostate cancer detection",
